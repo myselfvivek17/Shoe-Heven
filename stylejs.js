@@ -21,6 +21,7 @@ addButtonList.forEach(function (button) {
 
     const ctxt = content.querySelector(".card-text");
     let p = ctxt.querySelector(".price");
+    const cdtext =ctxt.innerText;
     prices.push(p.textContent);
     if (clickCount==1){
     const newDiv = document.createElement("div");
@@ -33,7 +34,7 @@ addButtonList.forEach(function (button) {
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${ct.textContent}</h5>
-        <p class="card-text">${ctxt.textContent}</p>
+        <p class="card-text">MRP: ₹<span class="price">${cdtext.slice(6)}</span></p>
         <div class="input-group mb-3 add">
       <button
         class="btn btn-outline-secondary minus"
@@ -84,16 +85,30 @@ addButtonList.forEach(function (button) {
 // ButtonIncrementor
 contentDiv.addEventListener('click',function(e){
   const targetElement = e.target;
+  const targetParent = targetElement.parentNode.parentNode;//doing
+  const totalPric = targetParent.querySelector('.price').textContent;
+  console.log(totalPric);
   if (targetElement.classList.contains('minus')) {
     const num = targetElement.parentNode.querySelector('.num');
 
     if (num.value > 0) {
+      console.log(prices);
+      const index = prices.indexOf(totalPric);
+
+    if (index !== -1) {
+      prices.splice(index, 1);
+    }
       num.value--;
     }
   } else if (targetElement.classList.contains('plus')) {
     const num = targetElement.parentNode.querySelector('.num');
     if (num.value < 100) {
+      prices.push(totalPric);
       num.value++;
     }
   }
+  const numbers = prices.map(str => parseFloat(str.replace(/,/g, '')));
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    const sumWithDecimalsAndCommas = sum.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    totalPrice.textContent = sumWithDecimalsAndCommas;
 },);
