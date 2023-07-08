@@ -25,10 +25,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Shoes</title>
+    <title>Shoe/Heven</title>
   </head>
 
   <body>
+    <div id="toastBox"></div>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Shoe/Haven</a>
@@ -46,14 +47,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="#">
                 <ion-icon name="home-outline"></ion-icon> Home</a
               >
             </li>
             <li class="nav-item">
               <a
                 type="button"
-                class="nav-link"
+                class="nav-link active"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
@@ -61,7 +62,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#foot"
+              <a class="nav-link active" href="#foot"
                 ><ion-icon name="call-outline"></ion-icon> Contact us</a
               >
             </li>
@@ -110,7 +111,7 @@
     <div class="container shop" align="center">
       <div class="row align-items-center justify-content-between">
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -165,14 +166,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">18,395.00</span>
               </p>
-              <button class="btn btn-dark addContentButton" id="btn1">
+              <button class="btn btn-dark addContentButton" id="btn0">
                 Add To Cart
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample2" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -227,14 +228,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">10,795.00</span>
               </p>
-              <button href="#" class="btn btn-dark addContentButton">
+              <button href="#" class="btn btn-dark addContentButton" id="btn1">
                 Add To Cart
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample3" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -289,14 +290,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">15,995.00</span>
               </p>
-              <button href="#" class="btn btn-dark addContentButton">
+              <button href="#" class="btn btn-dark addContentButton" id="btn2">
                 Add To Cart
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample4" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -351,14 +352,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">16,410.00</span>
               </p>
-              <button href="#" class="btn btn-dark addContentButton">
+              <button href="#" class="btn btn-dark addContentButton" id="btn3">
                 Add To Cart
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample5" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -411,14 +412,14 @@
             <div class="card-body">
               <h5 class="card-title">Superstar Shoes</h5>
               <p class="card-text">MRP: ₹<span class="price">6,999.50</span></p>
-              <button href="#" class="btn btn-dark addContentButton">
+              <button href="#" class="btn btn-dark addContentButton" id="btn4">
                 Add To Cart
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample6" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -473,12 +474,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">14,999.00</span>
               </p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn5">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample7" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -531,12 +534,14 @@
             <div class="card-body">
               <h5 class="card-title">Converse Chuck Taylor All Stars</h5>
               <p class="card-text">MRP: ₹<span class="price">5,330.00</span></p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn6">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample8" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -589,12 +594,14 @@
             <div class="card-body">
               <h5 class="card-title">Reebok Question Low Shoes</h5>
               <p class="card-text">MRP: ₹<span class="price">7,199.00</span></p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn7">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample9" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -649,12 +656,14 @@
               <p class="card-text">
                 MRP: ₹<span class="price">10,877.00</span>
               </p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn8">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample10" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -707,12 +716,14 @@
             <div class="card-body">
               <h5 class="card-title">BMW M Motorsport SPEEDFUSION</h5>
               <p class="card-text">MRP: ₹<span class="price">4,499.00</span></p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn9">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample11" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -767,12 +778,14 @@
                 304 BEIGE DOODLE PRINT CANVAS HIGH-TOP SNEAKER
               </h5>
               <p class="card-text">MRP: ₹<span class="price">4,799.00</span></p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn10">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card" style="width: 18rem">
+          <div class="card shadow-sm" style="width: 18rem">
             <div id="carouselExample12" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -825,7 +838,9 @@
             <div class="card-body">
               <h5 class="card-title">706 BLACK RED GRAPHIC CHUNKY SNEAKER</h5>
               <p class="card-text">MRP: ₹<span class="price">5,999.00</span></p>
-              <a href="#" class="btn btn-dark addContentButton">Add To Cart</a>
+              <button href="#" class="btn btn-dark addContentButton" id="btn11">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
