@@ -6,9 +6,8 @@ let prices = [];
 addButtonList.forEach(function (button) {
   let clickCount = 0;
   button.addEventListener("click", function () {
-    
     clickCount++;
-    
+    toastNotify();
     const cont = button.parentElement;
     const conte = cont.parentElement;
 
@@ -65,7 +64,6 @@ addButtonList.forEach(function (button) {
     contentDiv.appendChild(newDiv);
     }
     else{
-      console.log(ct.textContent);
       const cards = contentDiv.querySelectorAll(".card");
       for(let i of cards){
       const cadt = i.querySelector(".card-title");
@@ -88,11 +86,10 @@ contentDiv.addEventListener('click',function(e){
   const targetParent = targetElement.parentNode.parentNode;//doing
   const totalPric = targetParent.querySelector('.price').textContent;
   console.log(totalPric);
+  const num = targetElement.parentNode.querySelector('.num');
   if (targetElement.classList.contains('minus')) {
-    const num = targetElement.parentNode.querySelector('.num');
 
     if (num.value > 0) {
-      console.log(prices);
       const index = prices.indexOf(totalPric);
 
     if (index !== -1) {
@@ -101,7 +98,6 @@ contentDiv.addEventListener('click',function(e){
       num.value--;
     }
   } else if (targetElement.classList.contains('plus')) {
-    const num = targetElement.parentNode.querySelector('.num');
     if (num.value < 100) {
       prices.push(totalPric);
       num.value++;
@@ -111,4 +107,22 @@ contentDiv.addEventListener('click',function(e){
     const sum = numbers.reduce((total, num) => total + num, 0);
     const sumWithDecimalsAndCommas = sum.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     totalPrice.textContent = sumWithDecimalsAndCommas;
+    if (num.value==0){
+      targetParent.parentNode.parentNode.remove();
+    }
 },);
+
+
+
+
+
+const toastBox = document.querySelector("#toastBox");
+function toastNotify(){
+  const toast = document.createElement("div");
+  toast.className = "toastMsg";
+  toast.innerHTML =`<ion-icon name="checkmark-circle" class="check"></ion-icon>Added to Cart`;
+  toastBox.appendChild(toast);
+  setTimeout(()=>{
+    toast.remove();
+  },3000);
+}
