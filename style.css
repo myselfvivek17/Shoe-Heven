@@ -1,3 +1,51 @@
+#toastBox{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 55px;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    left: calc(50% - 90px);
+}
+.toastMsg{
+    background-color: #ffffffdf;
+    border: black solid;
+    border-radius: 40px;
+    width: 180px;
+    height: 25px;
+    padding: 3px;
+    margin: 2px 2px 0px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.check{
+    color: rgb(14, 194, 14);
+}
+
+#btn0,#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11{
+    transition: background-color 0.3s ease;
+}
+
+#btn0:hover,
+#btn1:hover,
+#btn2:hover,
+#btn3:hover,
+#btn4:hover,
+#btn5:hover,
+#btn6:hover,
+#btn7:hover,
+#btn8:hover,
+#btn9:hover,
+#btn10:hover,
+#btn11:hover{
+background-color: white;
+    color: black;
+}
+
 .navbar {
     background-color: black;
     font-family: 'Play', sans-serif;
@@ -98,6 +146,8 @@ footer{
     font-size: 2em;
     margin: 0% 1%;
 }
+
+
 
 @media only screen and (max-width: 550px) {
     body{
