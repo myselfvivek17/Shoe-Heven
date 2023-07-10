@@ -21,6 +21,14 @@
     align-items: center;
 }
 
+#title{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: xx-large;
+}
+
+#navbarNav{
+    justify-content: space-between;
+}
 
 .check{
     color: rgb(14, 194, 14);
@@ -51,11 +59,9 @@ background-color: white;
     font-family: 'Play', sans-serif;
 }
 
-.navbar-brand {
-    font-size: x-large;
-}
 
 #navbarNav{
+    align-items: center;
     font-size: medium;
 }
 
@@ -146,6 +152,7 @@ footer{
     font-size: 2em;
     margin: 0% 1%;
 }
+
 
 
 
